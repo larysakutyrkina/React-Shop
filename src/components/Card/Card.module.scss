@@ -1,0 +1,25 @@
+.card {
+  border: 2px solid black;
+  border-radius: 4px;
+  background: black;
+  margin: 10px 5px 0px 5px;
+
+  &__img {
+    width: 300px;
+    height: 300px;
+  }
+
+  &__title {
+    padding: 2px 10px;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+  &__cost{
+    padding: 5px 10px;
+    color: whitesmoke;
+  }
+  &__color{
+    padding: 5px 10px;
+    color: whitesmoke;
+  }
+}

@@ -1,0 +1,16 @@
+body {
+  background-color: #2e009f;
+  font-family: 'Trispace', sans-serif;
+}
+.cards__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+.cards__header {
+  display: flex;
+  justify-content: center;
+  color: whitesmoke;
+}

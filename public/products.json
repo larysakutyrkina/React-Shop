@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Tess",
+    "cost": "50 billion $",
+    "imgUrl": "https://i.pinimg.com/564x/b1/c6/45/b1c645f666373ba67d58790116ea637f.jpg",
+    "id": "1",
+    "color": "Green"
+  },
+  {
+    "name": "Chandra",
+    "cost": "70 billion $",
+    "imgUrl": "https://i.pinimg.com/564x/a9/c7/b1/a9c7b1f33588f9ae14c5ace036508ec6.jpg",
+    "id": "2",
+    "color": "Blue and Green"
+  },
+  {
+    "name": "Orion Bar",
+    "cost": "100 billion $",
+    "imgUrl": "https://i.pinimg.com/564x/1c/42/96/1c4296c2fc4e606105f5b0281afb74f3.jpg",
+    "id": "3",
+    "color": "Pink"
+  },
+  {
+    "name": "Hubble",
+    "cost": "200 billion $",
+    "imgUrl": " https://i.pinimg.com/564x/4e/a1/72/4ea1722d471e54ec9d4560159fa88d28.jpg",
+    "id": "4",
+    "color": "Blue"
+  },
+  {
+    "name": "Carinae",
+    "cost": "150 billion $",
+    "imgUrl": "https://i.pinimg.com/564x/0f/6b/d6/0f6bd6948d07034922fc286d7213a73c.jpg",
+    "id": "5",
+    "color": "Multiple"
+  },
+  {
+    "name": "Dwarf",
+    "cost": "120 billion $",
+    "imgUrl": "https://i.pinimg.com/564x/58/66/0f/58660f987d851075f358ccd1dd119e2c.jpg",
+    "id": "6",
+    "color": "Pink-blue"
+  },
+  {
+    "name": "Canis",
+    "cost": "200 billion $",
+    "imgUrl": "https://i.pinimg.com/564x/22/2e/32/222e3286c4c1f7a64f6d62905b7309d2.jpg",
+    "id": "7",
+    "color": "Red"
+  },
+  {
+    "name": "Supernova",
+    "cost": "130 billion $",
+    "imgUrl": "https://i.pinimg.com/564x/0f/b6/f8/0fb6f8e0886b7a52d13f49a85fc7d236.jpg",
+    "id": "8",
+    "color": "Pink"
+  },
+  {
+    "name": "Snowflake",
+    "cost": "250 billion $",
+    "imgUrl": "https://i.pinimg.com/564x/cf/d3/8d/cfd38d77c3da3d19884a2b19dec4fcf9.jpg",
+    "id": "9",
+    "color": "Blue"
+  },
+  {
+    "name": "Eye",
+    "cost": "150 billion $",
+    "imgUrl": "https://i.pinimg.com/564x/d5/d1/7e/d5d17e985c36ed4e1f00bfc088bd5b06.jpg",
+    "id": "10",
+    "color": "Purple"
+  }
+]
