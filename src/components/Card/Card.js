@@ -15,13 +15,13 @@ const Card = ({product, actionFav, addToCart, delFromCart, isFav}) => {
     }
 
     return (
-            <div className={`${style.card}`}>
-                <img className={`${style.card__img}`} src={imgUrl} alt="Star"/>
-                <div className={`${style.card__info}`}>
-                    <h4 className={`${style.card__title}`}>{name} </h4>
+            <div className={style.card}>
+                <img className={style.card__img} src={imgUrl} alt="Star"/>
+                <div className={style.card__info}>
+                    <h4 className={style.card__title}>{name} </h4>
                     <Favorite isFav={isFav} onSetFav={actionFav}/>
-                    <p className={`${style.card__color}`}> Color: {color} </p>
-                    <p className={`${style.card__cost}`}> Price: {cost} </p>
+                    <p className={style.card__color}> Color: {color} </p>
+                    <p className={style.card__cost}> Price: {cost} </p>
                 </div>
                 <Button
                     children="Add to Cart"

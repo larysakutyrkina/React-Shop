@@ -1,6 +1,8 @@
 import './App.css';
 import React, {Component} from 'react';
-import List from "./components/List/List";
+import Header from "./components/Header/Header";
+import AppRoutes from "./routes/AppRoutes";
+
 
 class App extends Component {
     constructor(props) {
@@ -10,7 +12,8 @@ class App extends Component {
     render () {
         return (
             <div>
-                <List />
+                <Header />
+                <AppRoutes />
             </div>
                 );
     }
