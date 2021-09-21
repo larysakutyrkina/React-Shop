@@ -1,7 +1,7 @@
 import './App.css';
 import React, {Component} from 'react';
 import Header from "./components/Header/Header";
-import AppRoutes from "./routes/AppRoutes";
+import Main from "./routes/Main";
 
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
         return (
             <div>
                 <Header />
-                <AppRoutes />
+                <Main />
             </div>
                 );
     }

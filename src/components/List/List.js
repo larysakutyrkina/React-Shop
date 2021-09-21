@@ -4,8 +4,6 @@ import style from "./List.module.scss";
 
 const List = ({
   products,
-  addToCart,
-  delFromCart,
   favArr,
   onFavClick,
   title,
@@ -18,8 +16,6 @@ const List = ({
           <Card
             key={product.id}
             product={product}
-            addToCart={addToCart}
-            delFromCart={delFromCart}
             isFav={favArr.includes(product.id)}
             actionFav={() => onFavClick(product.id)}
           />

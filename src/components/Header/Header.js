@@ -11,7 +11,7 @@ const Header = () => {
                     <li className={style.subtext}>
                         <NavLink exact className={style.navlink} activeStyle={{
                             fontWeight: "bold",
-                            color: "deeppink"
+                            color: "#ed57b6"
                         }} to='/'> Main Page
                         </NavLink>
                     </li>
@@ -19,7 +19,7 @@ const Header = () => {
                     <li className={style.subtext}>
                             <NavLink exact className={style.navlink} activeStyle={{
                                 fontWeight: "bold",
-                                color: "deeppink"
+                                color: "#ed57b6"
                             }} to='/favorites'> Go to Favorites &#127775;
                             </NavLink>
                     </li>
@@ -27,7 +27,7 @@ const Header = () => {
                     <li className={style.subtext}>
                         <NavLink exact className={style.navlink} activeStyle={{
                             fontWeight: "bold",
-                            color: "deeppink"
+                            color: "#ed57b6"
                         }} to='/cart'> Go to Cart &#128722;
                         </NavLink>
                     </li>

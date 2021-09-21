@@ -6,7 +6,7 @@ class Button extends Component {
         const {children, backgroundColor, onClick} = this.props;
         return (
             <button
-                className={`${style.btn}`}
+                className={style.btn}
                 onClick={onClick}
                 style={{backgroundColor: backgroundColor}}
             >

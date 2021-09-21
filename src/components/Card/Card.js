@@ -1,68 +1,47 @@
-import React, {useState} from 'react';
+import React from 'react';
 import style from './Card.module.scss';
 import Button from "../Button/Button";
 import Favorite from "../Favorite/Favorite";
-import Modal from "../Modal/Modal";
+import {useDispatch, useSelector} from "react-redux";
+import {addModal, delModal} from "../../store/modal/actions";
+import {setCart} from "../../store/products/actions";
+import {productsSelectors} from "../../store/products";
 
-const Card = ({product, actionFav, addToCart, delFromCart, isFav}) => {
 
+const Card = ({product, actionFav, isFav}) => {
+
+    const dispatch = useDispatch()
     const {imgUrl, id, name, color, cost} = product;
 
-    const [btnState, setBtn] = useState(null);
-
-    function hideModal(){
-        setBtn("null")
-    }
+    const cartArr = useSelector(productsSelectors.cartArr());
 
     return (
-            <div className={style.card}>
-                <img className={style.card__img} src={imgUrl} alt="Star"/>
-                <div className={style.card__info}>
-                    <h4 className={style.card__title}>{name} </h4>
-                    <Favorite isFav={isFav} onSetFav={actionFav}/>
-                    <p className={style.card__color}> Color: {color} </p>
-                    <p className={style.card__cost}> Price: {cost} </p>
-                </div>
+        <div className={style.card}>
+            <img className={style.card__img} src={imgUrl} alt="Star"/>
+            <div className={style.card__info}>
+                <h4 className={style.card__title}>{name} </h4>
+                <Favorite isFav={isFav} onSetFav={actionFav}/>
+                <p className={style.card__color}> Color: {color} </p>
+                <p className={style.card__cost}> Price: {cost} </p>
+            </div>
+
+            {!cartArr.includes(id) && (
                 <Button
                     children="Add to Cart"
                     backgroundColor={"#2e009f"}
-                    onClick={() => setBtn('firstModal')}
+                    onClick={() => dispatch(addModal(id))}
                 />
+            )}
 
-                <Button
-                    children="Delete from Cart"
-                    backgroundColor={"#0b484b"}
-                    onClick={() => setBtn('secondModal')}
-                />
-
-                {btnState === 'firstModal' && (
-                    <Modal
-                        backgroundColor={"#3704c4"}
-                        header={"Are you sure you want to add this to cart?"}
-                        closeButton={"x"}
-                        onHide={hideModal}
-                        text={"You can always remove it."}
-                        actionCart={() => {
-                            addToCart(id)
-                            hideModal()
-                        }}
-                    />
-                )}
-                {btnState === 'secondModal' && (
-                    <Modal
-                        backgroundColor={"#0c5155"}
-                        header={'Are you sure you want to delete this from cart?'}
-                        closeButton={"x"}
-                        onHide={hideModal}
-                        text={"You can always add it back"}
-                        actionCart={() => {
-                            delFromCart(id)
-                            hideModal()
-                        }}
-                    />
-                )}
-            </div>
-    );
-  };
+            {cartArr.includes(id) && (
+            <Button
+                children="Delete from Cart"
+                backgroundColor={"#0b484b"}
+                onClick={() => dispatch(delModal(id))}
+            />
+            )}
+        </div>
+    )
+}
 
 export default Card;
