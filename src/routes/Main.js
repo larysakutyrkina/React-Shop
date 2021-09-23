@@ -7,6 +7,7 @@ import {setFav, setCart, getProducts} from "../store/products/actions";
 import Modal from "../components/Modal/Modal";
 import {modalSelectors} from "../store/modal";
 import {hideModal} from "../store/modal/actions";
+import CheckOutForm from "../components/CheckOutForm/CheckOutForm";
 
 const Main = () => {
 
@@ -91,6 +92,7 @@ const Main = () => {
               onFavClick={onFavClick}
               title={"Cart"}
           />
+          <CheckOutForm />
         </Route>
       </Switch>
       {isModalOpen && isModalOpen.actionType === 'firstModal' && (

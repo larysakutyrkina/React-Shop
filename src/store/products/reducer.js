@@ -1,4 +1,4 @@
-import {SET_FAV, SET_CART, GET_PRODUCTS} from "./types";
+import {SET_FAV, SET_CART, GET_PRODUCTS, EMPTY_CART} from "./types";
 
 const initialState = {
     products: [],
@@ -18,6 +18,9 @@ const productsReducer = (state = initialState, action) => {
             return {...state, cartArr: action.payload};
         case GET_PRODUCTS:
             return {...state, products: action.payload};
+        case EMPTY_CART:
+            return {...state, cartArr: []};
+
         default:
             return state;
     }
